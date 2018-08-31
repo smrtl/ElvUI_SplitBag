@@ -1,0 +1,12 @@
+## Interface: 80000
+## Author: smrtl
+## Credit: Elv, Blazeflack
+## Version: 1.00
+## Title: |cff1784d1ElvUI SplitBag|r
+## Notes: Split bag by bags
+## RequiredDeps: ElvUI
+## DefaultState: enabled
+
+locales\load_locales.xml
+core.lua
+bags.lua
