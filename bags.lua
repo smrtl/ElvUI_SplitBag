@@ -25,7 +25,7 @@ function SB.Layout(self, isBank)
     for i, bagID in ipairs(f.BagIDs) do
         local newBag = bagID == 1 and splitBag1 or bagID == 2 and splitBag2 or bagID == 3 and splitBag3 or bagID == 4 and splitBag4 or false;
         
-        --Bag Slots
+        -- Bag Slots
 		local numSlots = GetContainerNumSlots(bagID);
         if numSlots > 0 and f.Bags[bagID] then
             for slotID = 1, numSlots do
@@ -60,4 +60,4 @@ function SB.Layout(self, isBank)
 
     f:Size(containerWidth, ((buttonSize + buttonSpacing) * numContainerRows) + numBags * bagSpacing + f.topOffset + f.bottomOffset + 2);
 end
-hooksecurefunc(B, "Layout", SB.Layout)
+hooksecurefunc(B, "Layout", SB.Layout) -- post hook
